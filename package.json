@@ -2,12 +2,12 @@
   "name": "deployment-test-v2",
   "version": "0.0.0",
   "scripts": {
-    "ng": "../TrikonWebsite/node_modules/.bin/ng",
-    "start": "node ../TrikonWebsite/Server/bin/www",
-    "build": "../TrikonWebsite/node_modules/.bin/ng build",
-    "test": "../TrikonWebsite/node_modules/.bin/ng test",
-    "lint": "../TrikonWebsite/node_modules/.bin/ng lint",
-    "e2e": "../TrikonWebsite/node_modules/.bin/ng e2e"
+    "ng": "ng",
+    "start": "Server/bin/www",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
