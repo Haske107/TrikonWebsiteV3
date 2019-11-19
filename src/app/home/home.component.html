@@ -1,0 +1,152 @@
+<div class="homepage" id="scrollbar_style" cdkScrollable >
+  <!-- <img src="https://drive.google.com/uc?export=view&id=1t2pg9FBEmsZ6sxe-gqttKAnCoLdrNuSz" alt="" class="Home_Button" appParallax> -->
+  <!--<div class="bannervideocountainer row" [ngStyle]="{'transform': 'scale(' + BannerVideoScaleValue+ ')'}">-->
+    <!--<img src="https://drive.google.com/uc?export=view&id=1CCZYzU2iJ3NXll9MjS462Z-u99p5JasJ" alt="" class="Monolith">-->
+      <!--<iframe-->
+          <!--src="https://player.vimeo.com/video/322980163?background=1"-->
+          <!--webkitallowfullscreen=""-->
+          <!--mozallowfullscreen=""-->
+          <!--allowfullscreen=""-->
+          <!--allow="autoplay"-->
+          <!--id="iframe59217"-->
+          <!--data-ready="true"-->
+          <!--class="bannervideosource col"-->
+          <!--[ngStyle]="{'transform': 'scale(1)'}">-->
+  <!--</iframe>-->
+  <!--</div>-->
+
+
+  <div class="Intro_Row row" >
+    <div class="col Intro_Row_Column">
+      <div class="bannervideocountainer row"  *ngIf="true">
+        <app-monolith [ngStyle]="{'top': DistanceFromTop/1.2}" [BannerRotateValue]="BannerRotateValue" [BannerVideoScaleValue]="BannerVideoScaleValue"></app-monolith>
+      </div>
+      <!--<img src="https://drive.google.com/uc?export=view&id=1-x1CpXM4a48v19Nr-2lg1mzAYMB5KuvQ" alt="" class="Section1_Background">-->
+      <img class="Home_Logo" [ngStyle]="isMobile ? {'width': '90%', 'left': '5%', 'margin-top': '24px'} : {}" src="https://drive.google.com/uc?export=view&id=1hRJAJqpgwr-Ihg0vGUhOLzG4KRk8xNn1" alt="" >
+      <h5 class="Subtitle" [ngStyle]="isMobile ? {'width': '90%', 'left': '5%', 'margin-top': '24px', 'font-size': '36px'} : {}">GLOBAL ARTISTS. ORGANIC CONTENT.</h5>
+      <!--<img [ngStyle]="{'bottom': Parallaxer2, 'transform': 'scale(' + PlanetTopScale + ')'}" src="https://drive.google.com/uc?export=view&id=1L6Xas1zCMRyrthxmGehIuM9yGnODq0_I" alt="" class="Planet_Top">-->
+      <img [ngStyle]="{'bottom':Parallaxer}" src="https://drive.google.com/uc?export=view&id=1j45C7fCzMk1ono10J7bq0PN8R0bSOlvH" alt="" class="Planet">
+    </div>
+  </div>
+
+  <div class="Grid_Row row">
+      <div class="col">
+      <mat-grid-list [cols]="isMobile ? 2 : 4" rowHeight="1:1"  class="Grid_List">
+            <mat-grid-tile class="tile" *ngFor="let Project of ProjectIDs; index as i;" (mouseover)="MouseOverActiveIndex = i" (mouseout)="MouseOverActiveIndex = -1">
+            <img src="{{GoogleBaseLink + Project}}" alt="" class="Project_Image">
+            <img src="{{GoogleBaseLink + TitledProjectIDs[i]}}" alt="" class="Project_Image Titled" [ngStyle]="{'opacity': MouseOverActiveIndex != i ? '0' : '1'}">
+         </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+
+  <div class="Team_Row row">
+    <div class="Team_Col col">
+      <div class="Team_Col_Background_Wrapper">
+        <img src="https://drive.google.com/uc?export=view&id=1GjH21Rgf_bgTbjtgFFR9bg9s0ZZRmS0g" alt="" class="Team_Col_Background_Image">
+        <img src="https://drive.google.com/uc?export=view&id=18XCvkROaqtgZ5ttPqwfYIJJiAjZcZ5UY" alt="" class="Team_Col_Background_Image">
+      </div>
+      <div class="Admin_Team_Title_Row row">
+        <div class="Admin_Team_Title_Col col">
+          <h4 class="Admin_Team_Title">ADMINISTRATION TEAM</h4>
+        </div>
+      </div>
+      <div class="Team_List_Row row">
+        <div class="Team_List_Col col">
+          <h4 class="Team_Name">
+            SANTIAGO CERVANTES
+          </h4>
+          <br>
+          <h3 class="Team_Position">
+            Founder and CEO
+          </h3>
+          <br>
+          <br>
+
+          <h4 class="Team_Name">
+            CELINA BIURRUN
+          </h4>
+          <br>
+
+
+          <h3 class="Team_Position">
+            Co-Founder
+          </h3>
+          <br>
+          <br>
+
+          <h4 class="Team_Name">
+            DANIEL SABOUNE
+          </h4>
+          <br>
+
+          <h3 class="Team_Position">
+            Co-Founder
+          </h3>
+          <br>
+          <br>
+
+          <h4 class="Team_Name">
+            OLIVER ZACIU
+          </h4>
+          <br>
+          <h3 class="Team_Position">
+            Creative Director
+          </h3>
+          <br>
+          <br>
+          <h4 class="Team_Name">
+            SHO SCHROCK-MANABE
+          </h4>
+          <br>
+          <h3 class="Team_Position">
+            Head of Production
+          </h3>
+          <br>
+          <br>
+          <h4 class="Team_Name">
+            ARMANDO VERNET
+          </h4>
+          <br>
+          <h3 class="Team_Position">
+            Client Liason
+          </h3>
+          <br>
+          <br>
+          <h4 class="Team_Name">
+            JEFFREY HASKELL
+          </h4>
+          <br>
+          <h3 class="Team_Position">
+            Director of Technology
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="Contact_Row row" #Contact_Row>
+    <div class="Contact_Col col">
+      <div class="Contact_Col_Background_Wrapper">
+        <img src="https://drive.google.com/uc?export=view&id=15E0VzF0_7rHA06n1JzzaZW2DxAM_w3Y8" alt="" class="Contact_Col_Background_Image">
+      </div>
+<!--      <div class="Spaceship_Wrapper" #Spaceship [ngStyle]="{'top': SpaceshipY, 'left': SpaceshipX}" >-->
+<!--          <img src="https://drive.google.com/uc?export=view&id=1YYNpEWB8ShtIlxWEBqN12z0hBcE8swI-" alt="" class="Spaceship_Body_Image">-->
+<!--      </div>-->
+      <div class="contact_box" [ngStyle]="isMobile ? {'top': '100px', 'font-weight': '400px' } : {}">
+        <h4 class="Contact_Title" [ngStyle]="isMobile ? {'font-size': '42px'} : {}">Contact Information</h4>
+        <h5 class="Category_Title" [ngStyle]="isMobile ? {'font-size' : '32px'} : {}">1433 1/2 Waterloo Street</h5>
+        <h5 class="Category_Title" [ngStyle]="isMobile ? {'font-size' : '32px'} : {}">Los Angeles, CA, 90026 </h5>
+        <h5 class="Category_Title" [ngStyle]="isMobile ? {'font-size' : '32px'} : {}">P: 323-919-9629</h5>
+        <h5 class="Category_Title" [ngStyle]="isMobile ? {'font-size' : '32px'} : {}">E: contact@trikon.xyz</h5>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>
+
+
+
+
+
